@@ -1,0 +1,18 @@
+start phase repl {
+    info = "Start point of the REPL",
+
+    actions {
+        pass scanParse;
+        print;
+    }
+};
+
+traversal print {
+    uid = PRT
+};
+
+root node num {
+    attributes {
+        int val { constructor }
+    }
+};
