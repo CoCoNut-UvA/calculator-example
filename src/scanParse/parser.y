@@ -2,6 +2,7 @@
   #include <stdio.h>
   #include <math.h>
   #include "ccngen/ast.h"
+  #include "ccngen/enum.h"
 
 extern node_st *root;
 
@@ -28,8 +29,9 @@ start:
 ;
 
 
-expr: 
-    NUM { $$ = ASTnum(yylval.intval); }
+expr: expr '+' expr { $$ = ASTbinop($1, $3, BT_add); }
+|     expr '-' expr { $$ = ASTbinop($1, $3, BT_sub); }
+|     NUM { $$ = ASTnum(yylval.intval); }
 ;
 
 %%

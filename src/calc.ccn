@@ -3,6 +3,7 @@ start phase repl {
 
     actions {
         pass scanParse;
+        eval;
         print;
     }
 };
@@ -11,8 +12,37 @@ traversal print {
     uid = PRT
 };
 
-root node num {
+traversal eval {
+    uid = EV,
+    nodes = {binop}
+};
+
+enum binop_type {
+    prefix = BT,
+    values = {
+        add, sub
+    }
+};
+
+node num {
     attributes {
         int val { constructor }
+    }
+};
+
+nodeset expr = {num, binop};
+
+root node binop {
+    children {
+        expr left { constructor, mandatory },
+        expr right { constructor, mandatory }
+    },
+
+    attributes {
+        binop_type type { constructor }
+    },
+
+    lifetime {
+        disallowed (eval -> )
     }
 };

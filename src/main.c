@@ -16,8 +16,8 @@ int main (void)
             break;
         }
         CCNrun(NULL);
+        putchar('\n');
         free(input_line);
     }
-    putchar('\n');
     return 0;
 }

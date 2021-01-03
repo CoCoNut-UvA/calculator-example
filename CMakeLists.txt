@@ -15,7 +15,7 @@ ADD_FLEX_BISON_DEPENDENCY(CalcLexer CalcParser)
 
 include(./coconut/coconut.cmake)
 
-add_executable(calculator ${FLEX_CalcLexer_OUTPUTS} ${BISON_CalcParser_OUTPUTS} src/main.c src/print.c src/scanParse/scanParse.c)
+add_executable(calculator ${FLEX_CalcLexer_OUTPUTS} ${BISON_CalcParser_OUTPUTS} src/main.c src/print.c src/scanParse/scanParse.c src/eval.c)
 
 coconut_target_generate(calculator "${CMAKE_CURRENT_LIST_DIR}/src/calc.ccn" dynamic)
 target_link_libraries(calculator PRIVATE readline)

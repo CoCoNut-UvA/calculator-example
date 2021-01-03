@@ -8,6 +8,7 @@
 %%
 [0-9]+ {yylval.intval = atoi(yytext); return NUM;}
 "+" { return '+';}
+"-" { return '-';}
 %%
 
 
