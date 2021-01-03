@@ -1,5 +1,5 @@
 #include "ccngen/ast.h"
-#include "ccn/dynamic_core.h"
+#include "ccn/ccn.h"
 #include "ccngen/enum.h"
 #include <stddef.h>
 

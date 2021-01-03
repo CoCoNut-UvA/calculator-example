@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 #include "ccngen/ast.h"
-#include "ccn/dynamic_core.h"
+#include "ccn/ccn.h"
 #include "ccngen/enum.h"
 
 char *operatorToString(enum binop_type type)
