@@ -4,7 +4,7 @@
 #include <readline/readline.h>
 #include <readline/history.h>
 
-#include "ccn/phase_driver.h"
+#include "ccn/ccn.h"
 
 
 char *input_line = NULL;

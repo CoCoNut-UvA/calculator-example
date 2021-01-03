@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 #include "ccngen/ast.h"
-#include "ccn/dynamic_core.h"
 #include "ccngen/enum.h"
+#include "ccn/ccn.h"
 
 node_st *PRTnum(node_st *node)
 {
