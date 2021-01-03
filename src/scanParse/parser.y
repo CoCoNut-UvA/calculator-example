@@ -2,6 +2,7 @@
   #include <stdio.h>
   #include <math.h>
   #include "ccngen/ast.h"
+  #include "ccngen/enum.h"
 
 extern node_st *root;
 

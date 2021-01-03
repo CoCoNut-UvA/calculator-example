@@ -2,6 +2,7 @@
 
 #include "ccngen/ast.h"
 #include "ccn/dynamic_core.h"
+#include "ccngen/enum.h"
 
 node_st *PRTnum(node_st *node)
 {
