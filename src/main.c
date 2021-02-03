@@ -6,6 +6,10 @@
 
 #include "ccn/ccn.h"
 
+void BreakpointHandler(node_st *root)
+{
+    return;
+}
 
 char *input_line = NULL;
 int main (void)
