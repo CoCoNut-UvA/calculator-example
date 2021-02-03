@@ -19,7 +19,7 @@ traversal eval {
 
 enum binop_type {
     prefix = BT,
-    values = {
+    values {
         add, sub
     }
 };
