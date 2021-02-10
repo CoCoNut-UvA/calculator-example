@@ -11,7 +11,16 @@ traversal print {
     uid = PRT
 };
 
-root node num {
+nodeset Literals = {Num};
+nodeset Expr = Literals;
+
+root node Program {
+    children {
+        Expr exprs
+    }
+};
+
+node Num {
     attributes {
         int val { constructor }
     }
