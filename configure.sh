@@ -10,9 +10,4 @@ echo "--------------------------------------------------"
 echo "Building coconut"
 echo "--------------------------------------------------"
 make -C coconut || exit 1
-echo "--------------------------------------------------"
-echo "Setting up debug build directory in build-debug"
-echo "--------------------------------------------------"
-make debug || exit 1
-echo "--------------------------------------------------"
 echo "Project configured."
