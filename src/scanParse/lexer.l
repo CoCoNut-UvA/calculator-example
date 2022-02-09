@@ -19,5 +19,6 @@ int yywrap()
 
 void yyerror(const char* s) 
 {
-    err(EXIT_FAILURE, "%s", s);
+    printf("%s\n", s);
+    exit(1);
 }
